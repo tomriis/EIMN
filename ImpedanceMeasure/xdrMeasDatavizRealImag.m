@@ -1,9 +1,10 @@
 lowFCutOff = 0.450;
 highFCutOff = 0.85;
-baseDir = '/Users/tomriis/MATLAB/ImpedanceMeasure/vnaData/';
+baseDir = 'C:\Users\Tom\Documents\MATLAB\EIMN\vnaData\';
+baseDir = 'C:\Users\Tom\Documents\MATLAB\EIMN\vnaData\20200724\';
 
 samples = {};
-for i = 1:1
+for i = 1:6
     samples{i} = num2str(i);
 end
 names = samples;
@@ -15,11 +16,13 @@ for i = 1:length(samples)
         figure;
         ax = gca;
         colorOrder = ax.ColorOrder;
-        h = figure(103);
+        h = figure(105);
         clf
     end
     
     filename = [baseDir,samples{i},'.s1p'];
+    filename = [baseDir,'XDR',num2str(i),'WMC','.s1p'];
+    filename = [baseDir,'XDR',num2str(i),'WMATCH','.s1p'];
     s = sparameters(filename);
     s1 = squeeze(s.Parameters);
     Z = sParamToZ(s1);
