@@ -6,9 +6,10 @@ N = 9;
 formatSpec = '%d';
 elseif 1
         baseDir = 'C:\Users\Tom\Documents\MATLAB\EIMN\vnaData\20200724\';
-        N = 6;
+        N = 1;
         formatSpec= 'XDR%dWMC';
-         formatSpec = 'XDR%dNOMICROCOAX';
+%          formatSpec = 'XDR%dNOMICROCOAX';
+%          formatSpec = 'XDR%dNOMATCHING';
 end
 
 inductances = zeros(N,2);

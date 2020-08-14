@@ -11,7 +11,7 @@ names = samples;
 
 h= figure;
 
-for i = 1:length(samples)
+for i = 1
     if i == 1
         figure;
         ax = gca;
@@ -22,7 +22,7 @@ for i = 1:length(samples)
     
     filename = [baseDir,samples{i},'.s1p'];
     filename = [baseDir,'XDR',num2str(i),'WMC','.s1p'];
-    filename = [baseDir,'XDR',num2str(i),'WMATCH','.s1p'];
+%     filename = [baseDir,'XDR',num2str(i),'WMATCH','.s1p'];
     s = sparameters(filename);
     s1 = squeeze(s.Parameters);
     Z = sParamToZ(s1);

@@ -1,7 +1,7 @@
 function [L, C] = LNetworkCalculationLowPass(Z,Rg,w)
     ReZ = real(Z);
     ImZ = imag(Z);
-    Q = sqrt(Rg/ReZ - 1);
+    Q = sqrt(Rg/ReZ-1);
     Xa = -1*(Rg^2)/(Q*Rg);
     Xb = Q*ReZ-ImZ;
     
